@@ -102,7 +102,7 @@ func main() {
 	// healthz 路由
 	mux.HandleFunc("/healthz", healthz)
 	// 判断httpserver 是否启动成功
-	if err := http.ListenAndServe(":8000", mux); err != nil {
+	if err := http.ListenAndServe(":8080", mux); err != nil {
 		log.Fatalf("Start httpserver failed, error: %v", err.Error())
 
 	}
