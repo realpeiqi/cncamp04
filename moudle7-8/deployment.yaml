@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpserver
+  labels:
+    app: httpserver
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  minReadySeconds: 15
+  selector:
+    matchLabels:
+      app: httpserver
+  template:
+    metadata:
+      labels:
+        app: httpserver
+    spec:
+      containers:
+        - name: httpserver
+          image: dynine/httpserver:v1.0
+          ports:
+            - containerPort: 9999
+              name: http-app
+          resources:
+            limits:
+              cpu: 200
+              memory: 150Mi
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          # 优雅启动
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 9999
+            failureThreshold: 3
+            periodSeconds: 5
+          # 探活
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 9999
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            failureThreshold: 3
+
