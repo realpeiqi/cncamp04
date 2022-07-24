@@ -26,12 +26,6 @@
 
 ------
 
-作业提交
-
-- [代码执行说明](https://github.com/zzzzzsy/cncamp04/blob/main/module08/README.md)
-- [本次作业代码地址](https://github.com/zzzzzsy/cncamp04/tree/main/module08)
-
-------
 
 ## [Module3](https://github.com/realpeiqi/cncamp04/tree/main/moudle3)
 
