@@ -69,7 +69,7 @@ httpsvc       192.168.104.19:9999,192.168.166.146:9999,192.168.166.147:9999   11
 ```
 root@master:~/cncamp04/moudle7-8# kubectl get svc 
 NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
-httpsvc      ClusterIP   10.96.134.80   <none>        80/TCP    16m
+httpsvc      NodePort   10.96.134.80   <none>        80/TCP    16m
 ```
 
 7	查看curl +NodePort
