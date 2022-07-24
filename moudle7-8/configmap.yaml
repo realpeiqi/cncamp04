@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  httpport: "9999"
+  loglevel: "info"
+kind: ConfigMap
+metadata:
+  name: myenv
