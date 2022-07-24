@@ -72,4 +72,10 @@ NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
 httpsvc      ClusterIP   10.96.134.80   <none>        80/TCP    16m
 ```
 
+7	查看curl +NodePort
+
+```sh
+root@master:~/cncamp04/moudle7-8# curl 10.96.134.80/healthz
+200
+```
 
