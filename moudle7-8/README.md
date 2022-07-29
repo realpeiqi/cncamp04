@@ -1,3 +1,7 @@
+---
+
+---
+
 # [cncamp04](https://github.com/realpeiqi/cncamp04/)
 
 ## [Module8](https://github.com/realpeiqi/cncamp04/tree/main/moudle8)
@@ -76,6 +80,45 @@ httpsvc      NodePort   10.96.134.80   <none>        80/TCP    16m
 
 ```sh
 root@master:~/cncamp04/moudle7-8# curl 10.96.134.80/healthz
+200
+```
+
+8	安装ingress
+
+```
+kubectl apply -f ingress-controller.yaml
+```
+
+9	查看ingress安装情况 
+
+```
+root@master:~# kubectl get pod -n ingress-nginx
+NAME                                      READY   STATUS      RESTARTS   AGE
+ingress-nginx-admission-create--1-bz72g   0/1     Completed   0          3h25m
+ingress-nginx-admission-patch--1-xdth8    0/1     Completed   0          3h25m
+ingress-nginx-controller-8m5gg            1/1     Running     0          3h16m
+ingress-nginx-controller-l5hdf            1/1     Running     0          3h25m
+ingress-nginx-controller-rzbsz            1/1     Running     0          3h25m
+```
+
+10	创建ingress
+
+```
+kubectl apply -f ingress.yaml
+```
+
+11 查看ingress
+
+```
+root@master:~# kubectl get ingress
+NAME      CLASS   HOSTS          ADDRESS                            PORTS   AGE
+ingress   nginx   www.dada.com   10.0.0.130,10.0.0.131,10.0.0.132   80      3h3m
+```
+
+12 测试ingress(做本地hosts解析)
+
+```
+root@master:~#curl  http://www.fengwei.com/healthz
 200
 ```
 
