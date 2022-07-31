@@ -1,0 +1,21 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  generation: 1
+  name: letsencrypt-prod
+spec:
+  acme:
+    # The ACME server URL      
+    email: dynine@126.com
+    preferredChain: ""
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt-prod
+     # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+     # Enable the HTTP-01 challenge provider
+    - http01:  # 验证域名是否正式存在
+        ingress:
+          class: nginx
+
