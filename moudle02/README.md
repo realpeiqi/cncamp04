@@ -1,4 +1,4 @@
-## [Module2](https://github.com/realpeiqi/cncamp04/tree/main/moudle2)
+## [Module02](https://github.com/realpeiqi/cncamp04/tree/main/moudle02)
 
 课后练习2.2
 • 编写一个HTTP 服务器，此练习为正式作业需要提交并批改
