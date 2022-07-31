@@ -1,6 +1,3 @@
----
-
----
 
 # [cncamp04](https://github.com/realpeiqi/cncamp04/)
 
