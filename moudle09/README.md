@@ -25,8 +25,13 @@ pod-node2name                 0/1     OutOfcpu   0          7m27s
 ```
 ------
 3	思考
+- 分析
 ```sh
-OutOfcpu :表明cpu个数只有4个。而pod资源需求中request需要5个。
-表示cpu资源不满足pod的创建条件。
+node2节点cpu个数只有4个。而pod资源需求中request需要5个。
+表示cpu资源不满足pod的创建条件。因此报错OutOfcpu
+```
+- 结论
+```sh
+创建pod的时候，要考虑pod所请求的资源要小于node节点上可用资源。
 ```
 ------
