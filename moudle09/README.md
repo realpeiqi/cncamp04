@@ -24,3 +24,9 @@ httpserver-5f87c874bd-tnqhw   1/1     Running    0          25h
 pod-node2name                 0/1     OutOfcpu   0          7m27s
 ```
 ------
+3	思考
+```sh
+OutOfcpu :表明cpu个数只有4个。而pod资源需求中request需要5个。
+表示cpu资源不满足pod的创建条件。
+```
+------
