@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-node2name
+  namespace: default
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    resources:
+      limits:
+        cncamp.com/reclaimed-cpu: 2
+        memory: 90Mi
+      requests:
+        cncamp.com/reclaimed-cpu: 2
+        memory: 90Mi
+  nodeName: k8s-node1 # 指定调度到k8s-node1节点上
