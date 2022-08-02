@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/issuer: letsencrypt-prod
+  name: https-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: www.fengwei.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: httpsvc
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - www.fengwei.com
+      secretName: fengwei-tls #  申请的证书会变成secret
+
