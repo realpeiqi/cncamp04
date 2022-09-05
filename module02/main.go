@@ -86,7 +86,7 @@ func ClientIP(r *http.Request) string {
 func healthz(w http.ResponseWriter, r *http.Request) {
 	//Fprintf：来格式化并输出到 io.Writers 而不是 os.Stdout。
 
-	fmt.Fprintf(w, "OK,working")
+	fmt.Fprintf(w, "200")
 }
 
 func main() {
