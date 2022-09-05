@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  annotations:
+spec:
+  ingressClassName: nginx	# 是基于nginx实现的，所以是nginx控制器。不同控制器标识不一样，需要去官网查询
+  rules:
+  - host: www.fengwei.space    # 域名
+    http:
+      paths:
+      - path: /				# 路径
+        pathType: Prefix
+        backend:
+          service:
+            name: httpsvc		# 需要将哪一组应用给暴露出去
+            port:
+              number: 80
+  - host: fengwei.space   # 域名
+    http:
+      paths:
+      - path: /                         # 路径
+        pathType: Prefix
+        backend:
+          service:
+            name: httpsvc               # 需要将哪一组应用给暴露出去
+            port:
+              number: 80                                       
