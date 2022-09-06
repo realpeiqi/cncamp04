@@ -1,4 +1,4 @@
-- job_name: '  '
+- job_name: 'kubernetes-endpoints'
   kubernetes_sd_configs:
     - role: endpoints
   relabel_configs:
