@@ -1,4 +1,4 @@
-## [Module10](https://github.com/realpeiqi/cncamp04/tree/main/moudle10)
+## [Module12](https://github.com/realpeiqi/cncamp04/tree/main/moudle12)
 
 ------
 
@@ -10,5 +10,10 @@
 1. 如何实现安全保证；
 2. 七层路由规则；
 3. 考虑 open tracing 的接入。
+------
 
+## 过程
+
+------
+- 作业内容和模块10极其类似，这里不做赘述。
 ------
