@@ -8,7 +8,7 @@
 
 ------
 
-- 详见[毕业总结.md文档](https://github.com/realpeiqi/cncamp04/tree/main/module15/毕业总结.md文档)
+- 详见[毕业总结.md文档](https://github.com/realpeiqi/cncamp04/tree/main/module15/毕业总结.md)
 
 ------
 
