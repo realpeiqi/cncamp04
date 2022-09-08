@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: httpserver
+  namespace: istio-system
+spec:
+  dnsNames:
+  - istio.fengwei.space  #（不要照抄我的）
+  issuerRef:
+    group: cert-manager.io
+    kind: Issuer
+    name: letsencrypt-prod
+  secretName: httpserver
+  usages:
+  - digital signature
+  - key encipherment

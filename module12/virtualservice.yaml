@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: httpserver
+  namespace: cloudnative
+spec:
+  hosts:
+    - "istio.fengwei.space"
+  gateways:
+    - https-gw
+  http:
+    - route:
+        - destination:
+            host: httpsvc.cloudnative.svc.cluster.local #（根据情况来，不要照抄我的）
+            port:
+              number: 80

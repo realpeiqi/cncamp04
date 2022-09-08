@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: https-gw
+  namespace: cloudnative
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - hosts:
+    - istio.fengwei.space # (域名自己定，不要照抄我的)
+    port:
+      name: https-default
+      number: 443
+      protocol: HTTPS
+    tls:
+      credentialName: httpserver
+      mode: SIMPLE
