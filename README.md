@@ -12,13 +12,6 @@
 
 ------
 
-## 结业总结
-
-------
-
-- 详见[毕业总结.md文档](
-
-------
 ## [Module12](https://github.com/realpeiqi/cncamp04/tree/main/module12)
   
 ------
